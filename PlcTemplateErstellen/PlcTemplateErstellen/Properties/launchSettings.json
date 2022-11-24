@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "PlcTemplateErstellen": {
+      "commandName": "Project",
+      "commandLineArgs": "TemplateStruktur.json"
+    }
+  }
+}

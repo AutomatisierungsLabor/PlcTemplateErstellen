@@ -1,0 +1,58 @@
+///////////////////////////////////////////////////////////////
+//
+// Digital Twin Kata - Beispiel 2
+//
+///////////////////////////////////////////////////////////////
+
+var AllesAus    = 0
+var Byte0       = 0
+
+// Eingänge:
+var DI_0_0 = "2#0000_0001" // -S1	Taster - Schliesser
+var DI_0_1 = "2#0000_0010" // -S2	Taster - Schliesser
+var DI_0_2 = "2#0000_0100" // -S3	Taster - Öffner
+var DI_0_3 = "2#0000_1000" // -S4	Taster - Öffner
+var DI_0_4 = "2#0001_0000" // -S5	Schalter - Schliesser
+var DI_0_5 = "2#0010_0000" // -S6	Schalter - Schliesser
+var DI_0_6 = "2#0100_0000" // -S7	Schalter - Öffner
+var DI_0_7 = "2#1000_0000" // -S8	Schalter - Öffner
+
+// Ausgänge:
+var DQ_0_0 = "2#0000_0001" // -P1	Meldeleuchte
+var DQ_0_1 = "2#0000_0010" // -P2	Meldeleuchte
+var DQ_0_2 = "2#0000_0100" // -P3	Meldeleuchte
+var DQ_0_3 = "2#0000_1000" // -P4	Meldeleuchte
+var DQ_0_4 = "2#0001_0000" // -P5	Meldeleuchte
+var DQ_0_5 = "2#0010_0000" // -P6	Meldeleuchte
+var DQ_0_6 = "2#0100_0000" // -P7	Meldeleuchte
+var DQ_0_7 = "2#1000_0000" // -P8	Meldeleuchte
+
+main()
+{
+    var S1 = PlcToDec(DI_0_0) // -S1	Taster - Schliesser
+    var S2 = PlcToDec(DI_0_1) // -S2	Taster - Schliesser
+    var S3 = PlcToDec(DI_0_2) // -S3	Taster - Öffner
+    var S4 = PlcToDec(DI_0_3) // -S4	Taster - Öffner
+    var S5 = PlcToDec(DI_0_4) // -S5	Schalter - Schliesser
+    var S6 = PlcToDec(DI_0_5) // -S6	Schalter - Schliesser
+    var S7 = PlcToDec(DI_0_6) // -S7	Schalter - Öffner
+    var S8 = PlcToDec(DI_0_7) // -S8	Schalter - Öffner
+
+    var P1 = PlcToDec(DQ_0_0) // -P1	Meldeleuchte
+    var P2 = PlcToDec(DQ_0_1) // -P2	Meldeleuchte
+    var P3 = PlcToDec(DQ_0_2) // -P3	Meldeleuchte
+    var P4 = PlcToDec(DQ_0_3) // -P4	Meldeleuchte
+    var P5 = PlcToDec(DQ_0_4) // -P5	Meldeleuchte
+    var P6 = PlcToDec(DQ_0_5) // -P6	Meldeleuchte
+    var P7 = PlcToDec(DQ_0_6) // -P7	Meldeleuchte
+    var P8 = PlcToDec(DQ_0_7) // -P8	Meldeleuchte
+
+
+    var Maske_P1 = P1
+
+    SetDiagrammZeitbereich 10
+    SetDataGridBitAnzahl 8, 4
+    VersionAnzeigen
+
+    WarnungAnzeigen "Kein Softwaretest vorhanden!"
+}

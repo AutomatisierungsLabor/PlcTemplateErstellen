@@ -1,0 +1,109 @@
+{
+  "AnalogeAusgaenge": {
+    "EaConfig": []
+  },
+  "AnalogeEingaenge": {
+    "EaConfig": []
+  },
+  "DigitaleAusgaenge": {
+    "EaConfig": [
+      {
+        "StartByte": 0,
+        "StartBit": 0,
+        "Type": "Bit",
+        "Bezeichnung": "PR1",
+        "Kommentar": "Parkplätze Reihe 1"
+      },
+      {
+        "StartByte": 0,
+        "StartBit": 1,
+        "Type": "Bit",
+        "Bezeichnung": "PR2",
+        "Kommentar": "Parkplätze Reihe 2"
+      },
+      {
+        "StartByte": 0,
+        "StartBit": 2,
+        "Type": "Bit",
+        "Bezeichnung": "PR3",
+        "Kommentar": "Parkplätze Reihe 3"
+      },
+      {
+        "StartByte": 0,
+        "StartBit": 3,
+        "Type": "Bit",
+        "Bezeichnung": "PR4",
+        "Kommentar": "Parkplätze Reihe 4"
+      },
+      {
+        "StartByte": 1,
+        "StartBit": 0,
+        "Type": "Byte",
+        "Bezeichnung": "Anzahl",
+        "Kommentar": "Anzahl freie Parkplätzte"
+      }
+    ]
+  },
+  "DigitaleEingaenge": {
+    "EaConfig": [
+      {
+        "StartByte": 0,
+        "StartBit": 0,
+        "Type": "Bit",
+        "Bezeichnung": "PS1",
+        "Kommentar": "Parkplätze Spalte 1 "
+      },
+      {
+        "StartByte": 0,
+        "StartBit": 1,
+        "Type": "Bit",
+        "Bezeichnung": "PS2",
+        "Kommentar": "Parkplätze Spalte 2"
+      },
+      {
+        "StartByte": 0,
+        "StartBit": 2,
+        "Type": "Bit",
+        "Bezeichnung": "PS3",
+        "Kommentar": "Parkplätze Spalte 3"
+      },
+      {
+        "StartByte": 0,
+        "StartBit": 3,
+        "Type": "Bit",
+        "Bezeichnung": "PS4",
+        "Kommentar": "Parkplätze Spalte 4"
+      },
+      {
+        "StartByte": 0,
+        "StartBit": 4,
+        "Type": "Bit",
+        "Bezeichnung": "PS5",
+        "Kommentar": "Parkplätze Spalte 5"
+      },
+      {
+        "StartByte": 0,
+        "StartBit": 5,
+        "Type": "Bit",
+        "Bezeichnung": "PS6",
+        "Kommentar": "Parkplätze Spalte 6"
+      },
+      {
+        "StartByte": 0,
+        "StartBit": 6,
+        "Type": "Bit",
+        "Bezeichnung": "PS7",
+        "Kommentar": "Parkplätze Spalte 7"
+      },
+      {
+        "StartByte": 0,
+        "StartBit": 7,
+        "Type": "Bit",
+        "Bezeichnung": "PS8",
+        "Kommentar": "Parkplätze Spalte 8"
+      }
+    ]
+  },
+  "ListeTextbausteinEintrag": [],
+  "Alarm": []
+}

@@ -1,0 +1,147 @@
+{
+  "AnalogeAusgaenge": {
+    "EaConfig": []
+  },
+  "AnalogeEingaenge": {
+    "EaConfig": []
+  },
+  "DigitaleAusgaenge": {
+    "EaConfig": [
+      {
+        "StartByte": 0,
+        "StartBit": 0,
+        "Type": "Bit",
+        "Bezeichnung": "P1",
+        "Kommentar": "Meldeleuchte grün"
+      },
+      {
+        "StartByte": 0,
+        "StartBit": 1,
+        "Type": "Bit",
+        "Bezeichnung": "P2",
+        "Kommentar": "Meldeleuchte grün"
+      },
+      {
+        "StartByte": 0,
+        "StartBit": 2,
+        "Type": "Bit",
+        "Bezeichnung": "P3",
+        "Kommentar": "Meldeleuchte grün"
+      },
+      {
+        "StartByte": 0,
+        "StartBit": 3,
+        "Type": "Bit",
+        "Bezeichnung": "P4",
+        "Kommentar": "Meldeleuchte grün"
+      },
+      {
+        "StartByte": 0,
+        "StartBit": 4,
+        "Type": "Bit",
+        "Bezeichnung": "P5",
+        "Kommentar": "Meldeleuchte grün"
+      },
+      {
+        "StartByte": 0,
+        "StartBit": 5,
+        "Type": "Bit",
+        "Bezeichnung": "P6",
+        "Kommentar": "Meldeleuchte grün"
+      },
+      {
+        "StartByte": 0,
+        "StartBit": 6,
+        "Type": "Bit",
+        "Bezeichnung": "P7",
+        "Kommentar": "Meldeleuchte grün"
+      },
+      {
+        "StartByte": 0,
+        "StartBit": 7,
+        "Type": "Bit",
+        "Bezeichnung": "P8",
+        "Kommentar": "Meldeleuchte grün"
+      }
+    ]
+  },
+  "DigitaleEingaenge": {
+    "EaConfig": [
+      {
+        "StartByte": 0,
+        "StartBit": 0,
+        "Type": "Bit",
+        "Bezeichnung": "S1",
+        "Kommentar": "Taster"
+      },
+      {
+        "StartByte": 0,
+        "StartBit": 1,
+        "Type": "Bit",
+        "Bezeichnung": "S2",
+        "Kommentar": "Taster"
+      },
+      {
+        "StartByte": 0,
+        "StartBit": 2,
+        "Type": "Bit",
+        "Bezeichnung": "S3",
+        "Kommentar": "Taster"
+      },
+      {
+        "StartByte": 0,
+        "StartBit": 3,
+        "Type": "Bit",
+        "Bezeichnung": "S4",
+        "Kommentar": "Taster"
+      },
+      {
+        "StartByte": 0,
+        "StartBit": 4,
+        "Type": "Bit",
+        "Bezeichnung": "S5",
+        "Kommentar": "Schiebeschalter"
+      },
+      {
+        "StartByte": 0,
+        "StartBit": 5,
+        "Type": "Bit",
+        "Bezeichnung": "S6",
+        "Kommentar": "Schiebeschalter"
+      },
+      {
+        "StartByte": 0,
+        "StartBit": 6,
+        "Type": "Bit",
+        "Bezeichnung": "S7",
+        "Kommentar": "Kippschalter"
+      },
+      {
+        "StartByte": 0,
+        "StartBit": 7,
+        "Type": "Bit",
+        "Bezeichnung": "S8",
+        "Kommentar": "Kippschalter"
+      }
+    ]
+  },
+  "ListeTextbausteinEintrag": [],
+  "Alarm": [
+    {
+      "Id": "0",
+      "Bezeichnung": "Thermorelais",
+      "Kommentar": "Thermorelais hat ausgelöst: bitte zurückstellen",
+      "ByteAlarm": "0",
+      "BitAlarm": "0",
+      "BitQuittiert": "1"
+    },
+    {
+      "Id": "1",
+      "Bezeichnung": "Not-Halt",
+      "Kommentar": "Not-Halt wurde betätigt: bitte zurückstellen",
+      "ByteAlarm": "0",
+      "BitAlarm": "4",
+      "BitQuittiert": "5"
+    }
+  ]
+}

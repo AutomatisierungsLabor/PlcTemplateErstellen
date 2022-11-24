@@ -1,0 +1,34 @@
+﻿{
+  "QuellOrdner": "Test\\Quelle",
+  "ZielOrdner": "Test\\Ziel",
+  "TemplateOrdner": "Test\\Ziel\\Template",
+  "TemplateListe": [
+    {
+      "Ordner": "",
+      "Dateien": [
+        "Contracts.dll",
+        "Contracts.pdb",
+        "IpAdressenBeckhoff.json",
+        "IpAdressenSiemens.json",
+        "LibDatenstruktur.dll",
+        "LibDatenstruktur.pdb",
+        "LibHighResolutionTimer.dll",
+        "LibHighResolutionTimer.pdb",
+        "LibKommunikation.dll",
+        "LibKommunikation.pdb",
+        "LibPlcTools.dll",
+        "LibPlcTools.pdb",
+        "LibSiebenSegmentAnzeige.dll",
+        "LibSiebenSegmentAnzeige.pdb",
+        "LibUtil.dll",
+        "LibUtil.pdb"
+      ]
+    },
+    {
+      "Ordner": "Videos",
+      "Dateien": [
+        "Flammen.mp4"
+      ]
+    }
+  ]
+}
