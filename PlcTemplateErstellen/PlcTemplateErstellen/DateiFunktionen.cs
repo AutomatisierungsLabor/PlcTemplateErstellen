@@ -9,20 +9,20 @@ public class DateiFunktionen
     {
         Console.Write("Alles kopieren ... ");
         CopyAll(_templateStruktur.TemplateStruktur.QuellOrdner, _templateStruktur.TemplateStruktur.ZielOrdner);
-        Console.Write("fertig \n\r");
+        Console.WriteLine("fertig ");
 
         Console.Write("Template Ordner erstellen ... ");
         if (Directory.Exists(_templateStruktur.TemplateStruktur.TemplateOrdner)) Directory.Delete(_templateStruktur.TemplateStruktur.TemplateOrdner, true);
         Directory.CreateDirectory(_templateStruktur.TemplateStruktur.TemplateOrdner);
-        Console.Write("fertig \n\r");
+        Console.WriteLine("fertig ");
 
         Console.Write("TemplateOrdner füellen ... ");
         TemplateOrdnerFuellen();
-        Console.Write("fertig \n\r");
+        Console.WriteLine("fertig ");
 
         Console.Write("Duplikate löschen ... ");
         DuplikateLoeschen();
-        Console.Write("fertig \n\r");
+        Console.WriteLine("fertig ");
     }
     private void DuplikateLoeschen()
     {
@@ -92,13 +92,11 @@ public class DateiFunktionen
 
         Directory.CreateDirectory(target.FullName);
 
-        // Copy each file into the new directory.
         foreach (var fi in source.GetFiles())
         {
             fi.CopyTo(Path.Combine(target.FullName, fi.Name), true);
         }
 
-        // Copy each subdirectory using recursion.
         foreach (var diSourceSubDir in source.GetDirectories())
         {
             var nextTargetSubDir = target.CreateSubdirectory(diSourceSubDir.Name);
