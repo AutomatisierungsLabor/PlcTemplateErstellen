@@ -4,12 +4,22 @@ internal static class Program
 {
     public static void Main(string[] args)
     {
-        var templateStruktur = new TemplateStrukturLesen(args[0]);
-        var dateiFunktionen = new DateiFunktionen(templateStruktur);
+        if (args.Length == 0)
+        {
+            Console.Clear();
+            Console.WriteLine("Programmaufruf:");
+            Console.WriteLine("");
+            Console.WriteLine("PlcTemplateErstellen datei.json");
+            Console.WriteLine("");
+        }
+        else
+        {
+            var templateStruktur = new TemplateStrukturLesen(args[0]);
+            var dateiFunktionen = new DateiFunktionen(templateStruktur);
+            dateiFunktionen.TemplateErstellen();
+        }
 
-        dateiFunktionen.TemplateErstellen();
-
-        var a = Console.ReadLine();
-        Console.WriteLine(a);
+        Console.WriteLine("Bitte Enter drücken!");
+        _ = Console.ReadLine();
     }
 }
