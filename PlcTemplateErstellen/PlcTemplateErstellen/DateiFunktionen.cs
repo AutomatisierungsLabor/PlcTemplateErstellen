@@ -7,22 +7,45 @@ public class DateiFunktionen
     public DateiFunktionen(TemplateStrukturLesen templateStruktur) => _templateStruktur = templateStruktur;
     public void TemplateErstellen()
     {
-        Console.Write("Alles kopieren ... ");
-        CopyAll(_templateStruktur.TemplateStruktur.QuellOrdner, _templateStruktur.TemplateStruktur.ZielOrdner);
+        Console.WriteLine("Alles kopieren ... ");
+        CopyAll(_templateStruktur.TemplateStruktur.QuellOrdner, _templateStruktur.TemplateStruktur.ZielOrdner, 0);
         Console.WriteLine("fertig ");
 
-        Console.Write("Template Ordner erstellen ... ");
+        Console.WriteLine("Template Ordner erstellen ... ");
         if (Directory.Exists(_templateStruktur.TemplateStruktur.TemplateOrdner)) Directory.Delete(_templateStruktur.TemplateStruktur.TemplateOrdner, true);
         Directory.CreateDirectory(_templateStruktur.TemplateStruktur.TemplateOrdner);
         Console.WriteLine("fertig ");
 
-        Console.Write("TemplateOrdner füellen ... ");
+        Console.WriteLine("TemplateOrdner füellen ... ");
         TemplateOrdnerFuellen();
         Console.WriteLine("fertig ");
 
-        Console.Write("Duplikate löschen ... ");
+        Console.WriteLine("Duplikate löschen ... ");
         DuplikateLoeschen();
+
+        Console.WriteLine("Leere Ordner löschen ... ");
+        LeereOrdnerLoeschen(_templateStruktur.TemplateStruktur.ZielOrdner);
+
         Console.WriteLine("fertig ");
+    }
+    public void LeereOrdnerLoeschen(string path)
+    {
+        try
+        {
+            foreach (var directory in Directory.EnumerateDirectories(path))
+            {
+                LeereOrdnerLoeschen(directory);
+            }
+            if (!Directory.EnumerateFileSystemEntries(path).Any())
+            {
+                Directory.Delete(path);
+            }
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
     }
     private void DuplikateLoeschen()
     {
@@ -48,6 +71,7 @@ public class DateiFunktionen
             {
                 foreach (var fileDt in filesDigitalTwin)
                 {
+                    if (!File.Exists(fileDt)) continue;
                     if (!Path.GetFileName(fileDt).Equals(Path.GetFileName(fileTemplate))) continue;
                     if (!AreFileContentsEqual(fileDt, fileTemplate)) continue;
                     File.Delete(fileDt);
@@ -66,7 +90,6 @@ public class DateiFunktionen
         var quellOrdnerListe = quellOrdner.GetDirectories();
         var ersterQuellOrdner = quellOrdnerListe[0].Name;
 
-
         foreach (var templateliste in _templateStruktur.TemplateStruktur.TemplateListe)
         {
             var quelle = Path.Combine(_templateStruktur.TemplateStruktur.QuellOrdner, ersterQuellOrdner, templateliste.Ordner);
@@ -80,12 +103,14 @@ public class DateiFunktionen
             }
         }
     }
-    public static void CopyAll(string quelle, string ziel)
+    public static void CopyAll(string quelle, string ziel, int anzeigen)
     {
         if (Directory.Exists(ziel)) Directory.Delete(ziel, true);
 
         if (quelle == null) return;
         if (ziel == null) return;
+
+        if (anzeigen < 2) Console.WriteLine("  " + quelle);
 
         var source = new DirectoryInfo(quelle);
         var target = new DirectoryInfo(ziel);
@@ -100,7 +125,7 @@ public class DateiFunktionen
         foreach (var diSourceSubDir in source.GetDirectories())
         {
             var nextTargetSubDir = target.CreateSubdirectory(diSourceSubDir.Name);
-            CopyAll(diSourceSubDir.ToString(), nextTargetSubDir.ToString());
+            CopyAll(diSourceSubDir.ToString(), nextTargetSubDir.ToString(), anzeigen++);
         }
     }
     public static bool AreFileContentsEqual(string path1, string path2) => File.ReadAllBytes(path1).SequenceEqual(File.ReadAllBytes(path2));
