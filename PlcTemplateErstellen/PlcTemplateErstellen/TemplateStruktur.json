@@ -1,34 +1,105 @@
 ﻿{
-  "QuellOrdner": "Test\\Quelle",
-  "ZielOrdner": "Test\\Ziel",
-  "TemplateOrdner": "Test\\Ziel\\Template",
-  "TemplateListe": [
-    {
-      "Ordner": "",
-      "Dateien": [
-        "Contracts.dll",
-        "Contracts.pdb",
-        "IpAdressenBeckhoff.json",
-        "IpAdressenSiemens.json",
-        "LibDatenstruktur.dll",
-        "LibDatenstruktur.pdb",
-        "LibHighResolutionTimer.dll",
-        "LibHighResolutionTimer.pdb",
-        "LibKommunikation.dll",
-        "LibKommunikation.pdb",
-        "LibPlcTools.dll",
-        "LibPlcTools.pdb",
-        "LibSiebenSegmentAnzeige.dll",
-        "LibSiebenSegmentAnzeige.pdb",
-        "LibUtil.dll",
-        "LibUtil.pdb"
-      ]
-    },
-    {
-      "Ordner": "Videos",
-      "Dateien": [
-        "Flammen.mp4"
-      ]
-    }
-  ]
+    "QuellOrdner": "Test\\Quelle",
+    "ZielOrdner": "Test\\Ziel",
+    "TemplateOrdner": "Test\\Ziel\\Template",
+    "TemplateListe": [
+        {
+            "Ordner": "",
+            "Dateien": [
+                "BasePlcDtAt.dll",
+                "BasePlcDtAt.pdb",
+                "CommunityToolkit.Mvvm.dll",
+                "Contracts.dll",
+                "Contracts.pdb",
+                "IpAdressenBeckhoff.json",
+                "IpAdressenSiemens.json",
+                "LibDatenstruktur.dll",
+                "LibDatenstruktur.pdb",
+                "LibHighResolutionTimer.dll",
+                "LibHighResolutionTimer.pdb",
+                "LibKommunikation.dll",
+                "LibKommunikation.pdb",
+                "LibPlcTools.dll",
+                "LibPlcTools.pdb",
+                "LibSiebenSegmentAnzeige.dll",
+                "LibSiebenSegmentAnzeige.pdb",
+                "LibUtil.dll",
+                "LibUtil.pdb",
+                "ICSharpCode.AvalonEdit.dll",
+                "json.zip",
+                "LibAlarmverwaltung.dll",
+                "LibAlarmverwaltung.pdb",
+                "LibAutoTest.dll",
+                "LibAutoTest.pdb",
+                "LibAutoTestRunner.dll",
+                "LibAutoTestRunner.pdb",
+                "LibConfigDt.dll",
+                "LibConfigDt.pdb",
+                "LibDisplayInfo.dll",
+                "LibDisplayInfo.pdb",
+                "LibDisplayPlc.dll",
+                "LibDisplayPlc.pdb",
+                "LibGaugeControl.dll",
+                "LibGaugeControl.pdb",
+                "LibLoesungenAnzeigen.dll",
+                "LibLoesungenAnzeigen.pdb",
+                "LibNotMyInterpreter.dll",
+                "LibNotMyInterpreter.pdb",
+                "LibTextbausteine.dll",
+                "LibWpf.dll",
+                "LibWpf.pdb",
+                "log4net.config",
+                "log4net.dll",
+                "Newtonsoft.Json.dll",
+                "ScottPlot.dll",
+                "ScottPlot.WPF.dll",
+                "Sharp7.dll",
+                "System.ComponentModel.Composition.dll",
+                "System.Reactive.dll",
+                "TwinCAT.Ads.Abstractions.dll",
+                "TwinCAT.Ads.dll",
+                "TwinCAT.Ads.Server.dll",
+                "WpfAnimatedGif.dll",
+                "LibEncrypt.dll",
+                "LibEncrypt.pdb",
+                "LibRpc.dll",
+                "LibRpc.pdb",
+                "MessagePack.Annotations.dll",
+                "Microsoft.Extensions.Logging.Abstractions.dll",
+                "SharedMemory.dll",
+                "Xceed.Wpf.AvalonDock.NET5.dll",
+                "Xceed.Wpf.AvalonDock.Themes.Aero.NET5.dll",
+                "Xceed.Wpf.AvalonDock.Themes.Metro.NET5.dll",
+                "Xceed.Wpf.AvalonDock.Themes.VS2010.NET5.dll",
+                "Xceed.Wpf.Toolkit.NET5.dll"
+            ]
+        },
+        {
+            "Ordner": "Videos",
+            "Dateien": [
+                "Flammen.mp4"
+            ]
+        },
+        {
+            "Ordner": "de",
+            "Dateien": [
+                "Xceed.Wpf.AvalonDock.NET5.resources.dll"
+            ]
+        },
+        {
+            "Ordner": "LibRpcOpenness",
+            "Dateien": [
+                "LibRpcOpenness.exe",
+                "LibRpcOpenness.exe.config",
+                "LibRpcOpenness.pdb",
+                "log4net.dll",
+                "Newtonsoft.Json.dll",
+                "SharedMemory.dll",
+                "Siemens.Engineering.dll",
+                "Siemens.Engineering.Hmi.dll",
+                "Siemens.Engineering.Hmi.xml",
+                "Siemens.Engineering.xml"
+            ]
+        }
+    ]
 }
