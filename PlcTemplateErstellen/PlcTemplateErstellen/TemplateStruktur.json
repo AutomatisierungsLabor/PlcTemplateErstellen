@@ -1,7 +1,7 @@
 ﻿{
-    "QuellOrdner": "Test\\Quelle",
-    "ZielOrdner": "Test\\Ziel",
-    "TemplateOrdner": "Test\\Ziel\\Template",
+    "QuellOrdner": "d:\\git\\PlcDigitalTwinAutoTest\\PlcDigitalTwinAutoTest\\___DigitalTwin",
+    "ZielOrdner": "d:\\git\\PlcDigitalTwinAutoTest\\PlcDigitalTwinAutoTest\\___DigitalTwinExport",
+    "TemplateOrdner": "d:\\git\\PlcDigitalTwinAutoTest\\PlcDigitalTwinAutoTest\\___DigitalTwinExport\\DtTemplate",
     "TemplateListe": [
         {
             "Ordner": "",
@@ -65,7 +65,9 @@
                 "LibRpc.dll",
                 "LibRpc.pdb",
                 "MessagePack.Annotations.dll",
+                "MessagePack.dll",
                 "Microsoft.Extensions.Logging.Abstractions.dll",
+                "Microsoft.NET.StringTools.dll",
                 "SharedMemory.dll",
                 "Xceed.Wpf.AvalonDock.NET5.dll",
                 "Xceed.Wpf.AvalonDock.Themes.Aero.NET5.dll",
@@ -92,13 +94,67 @@
                 "LibRpcOpenness.exe",
                 "LibRpcOpenness.exe.config",
                 "LibRpcOpenness.pdb",
+                "log4net.config",
                 "log4net.dll",
                 "Newtonsoft.Json.dll",
                 "SharedMemory.dll",
                 "Siemens.Engineering.dll",
                 "Siemens.Engineering.Hmi.dll",
-                "Siemens.Engineering.Hmi.xml",
-                "Siemens.Engineering.xml"
+                "Siemens.Engineering.Hmi.xml"
+            ]
+        },
+        {
+            "Ordner": "fr",
+            "Dateien": [
+                "Xceed.Wpf.AvalonDock.NET5.resources.dll"
+            ]
+        },
+        {
+            "Ordner": "hu",
+            "Dateien": [
+                "Xceed.Wpf.AvalonDock.NET5.resources.dll"
+            ]
+        },
+        {
+            "Ordner": "it",
+            "Dateien": [
+                "Xceed.Wpf.AvalonDock.NET5.resources.dll"
+            ]
+        },
+        {
+            "Ordner": "ja-JP",
+            "Dateien": [
+                "Xceed.Wpf.AvalonDock.NET5.resources.dll"
+            ]
+        },
+        {
+            "Ordner": "pt-BR",
+            "Dateien": [
+                "Xceed.Wpf.AvalonDock.NET5.resources.dll"
+            ]
+        },
+        {
+            "Ordner": "ro",
+            "Dateien": [
+                "Xceed.Wpf.AvalonDock.NET5.resources.dll"
+            ]
+        },
+        {
+            "Ordner": "ru",
+            "Dateien": [
+                "Xceed.Wpf.AvalonDock.NET5.resources.dll"
+            ]
+        },
+        {
+            "Ordner": "sv",
+            "Dateien": [
+                "Xceed.Wpf.AvalonDock.NET5.resources.dll"
+            ]
+        },
+        {
+            "Ordner": "zh-Hans",
+            "Dateien": [
+                "Xceed.Wpf.AvalonDock.NET5.resources.dll"
             ]
         }
     ]
