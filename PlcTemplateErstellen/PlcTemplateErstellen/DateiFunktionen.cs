@@ -1,27 +1,35 @@
-﻿namespace PlcTemplateErstellen;
+using System.IO;
 
-public class DateiFunktionen
+namespace PlcTemplateErstellen;
+
+public class DateiFunktionen(TemplateStrukturLesen templateStruktur)
 {
-    private readonly TemplateStrukturLesen _templateStruktur;
-
-    public DateiFunktionen(TemplateStrukturLesen templateStruktur) => _templateStruktur = templateStruktur;
     public void TemplateErstellen()
     {
-
-        Console.WriteLine("Zielordner löschen ... ");
-        Directory.Delete(_templateStruktur.TemplateStruktur.ZielOrdner, true);
-        Console.WriteLine("fertig ");
+        if (Directory.Exists(templateStruktur.TemplateStruktur.ZielOrdner))
+        {
+            Console.WriteLine($"Zielordner löschen: {templateStruktur.TemplateStruktur.ZielOrdner} ... ");
+            Directory.Delete(templateStruktur.TemplateStruktur.ZielOrdner, true);
+            Console.WriteLine("fertig ");
+        }
 
         Console.WriteLine("Alles kopieren ... ");
-        CopyAll(_templateStruktur.TemplateStruktur.QuellOrdner, _templateStruktur.TemplateStruktur.ZielOrdner, true);
+        CopyAll(templateStruktur.TemplateStruktur.QuellOrdner, templateStruktur.TemplateStruktur.ZielOrdner, true);
         Console.WriteLine("fertig ");
 
-        Console.WriteLine("Template Ordner erstellen ... ");
-        if (Directory.Exists(_templateStruktur.TemplateStruktur.TemplateOrdner)) Directory.Delete(_templateStruktur.TemplateStruktur.TemplateOrdner, true);
-        Directory.CreateDirectory(_templateStruktur.TemplateStruktur.TemplateOrdner);
+        Console.WriteLine("Template Ordner");
+        if (Directory.Exists(templateStruktur.TemplateStruktur.TemplateOrdner))
+        {
+            Console.WriteLine($"Ordner löschen: {templateStruktur.TemplateStruktur.TemplateOrdner}");
+            Directory.Delete(templateStruktur.TemplateStruktur.TemplateOrdner, true);
+        }
+
+        Console.WriteLine($"Ordner erzeugen: {templateStruktur.TemplateStruktur.TemplateOrdner}");
+        _ = Directory.CreateDirectory(templateStruktur.TemplateStruktur.TemplateOrdner);
+
         Console.WriteLine("fertig ");
 
-        Console.WriteLine("TemplateOrdner füellen ... ");
+        Console.WriteLine("TemplateOrdner füllen ... ");
         TemplateOrdnerFuellen();
         Console.WriteLine("fertig ");
 
@@ -29,11 +37,11 @@ public class DateiFunktionen
         DuplikateLoeschen();
 
         Console.WriteLine("Leere Ordner löschen ... ");
-        LeereOrdnerLoeschen(_templateStruktur.TemplateStruktur.ZielOrdner);
+        LeereOrdnerLoeschen(templateStruktur.TemplateStruktur.ZielOrdner);
 
         Console.WriteLine("fertig ");
     }
-    public void LeereOrdnerLoeschen(string path)
+    public static void LeereOrdnerLoeschen(string path)
     {
         try
         {
@@ -41,10 +49,14 @@ public class DateiFunktionen
             {
                 LeereOrdnerLoeschen(directory);
             }
-            if (!Directory.EnumerateFileSystemEntries(path).Any())
+
+            if (Directory.EnumerateFileSystemEntries(path).Any())
             {
-                Directory.Delete(path);
+                return;
             }
+
+            Console.WriteLine($"Leerer Ordner löschen: {path}");
+            Directory.Delete(path);
         }
         catch (Exception e)
         {
@@ -54,15 +66,15 @@ public class DateiFunktionen
 
     private void DuplikateLoeschen()
     {
-        var zielOrdner = new DirectoryInfo(_templateStruktur.TemplateStruktur.ZielOrdner);
+        var zielOrdner = new DirectoryInfo(templateStruktur.TemplateStruktur.ZielOrdner);
         var zielOrdnerListe = zielOrdner.GetDirectories();
 
         foreach (var ordner in zielOrdnerListe)
         {
-            var kompletterOrdner = Path.Combine(_templateStruktur.TemplateStruktur.ZielOrdner, ordner.Name);
-            if (_templateStruktur.TemplateStruktur.TemplateOrdner != kompletterOrdner)
+            var kompletterOrdner = Path.Combine(templateStruktur.TemplateStruktur.ZielOrdner, ordner.Name);
+            if (templateStruktur.TemplateStruktur.TemplateOrdner != kompletterOrdner)
             {
-                IdentischeDateienLoeschen(_templateStruktur.TemplateStruktur.TemplateOrdner, kompletterOrdner);
+                IdentischeDateienLoeschen(templateStruktur.TemplateStruktur.TemplateOrdner, kompletterOrdner);
             }
         }
     }
@@ -76,10 +88,22 @@ public class DateiFunktionen
             {
                 foreach (var fileDt in filesDigitalTwin)
                 {
-                    if (!File.Exists(fileDt)) continue;
+                    if (!File.Exists(fileDt))
+                    {
+                        continue;
+                    }
 
-                    if (!Path.GetFileName(fileDt).Equals(Path.GetFileName(fileTemplate))) continue;
-                    if (!AreFileContentsEqual(fileDt, fileTemplate)) continue;
+                    if (!Path.GetFileName(fileDt).Equals(Path.GetFileName(fileTemplate)))
+                    {
+                        continue;
+                    }
+
+                    if (!AreFileContentsEqual(fileDt, fileTemplate))
+                    {
+                        continue;
+                    }
+
+                    Console.WriteLine($"Identische Datei löschen: {fileDt}");
                     File.Delete(fileDt);
                 }
             }
@@ -92,44 +116,68 @@ public class DateiFunktionen
     }
     private void TemplateOrdnerFuellen()
     {
-        var quellOrdner = new DirectoryInfo(_templateStruktur.TemplateStruktur.QuellOrdner);
+        var quellOrdner = new DirectoryInfo(templateStruktur.TemplateStruktur.QuellOrdner);
         var quellOrdnerListe = quellOrdner.GetDirectories();
         var ersterQuellOrdner = quellOrdnerListe[0].Name;
 
-        foreach (var templateliste in _templateStruktur.TemplateStruktur.TemplateListe)
+        foreach (var templateliste in templateStruktur.TemplateStruktur.TemplateListe)
         {
-            var quelle = Path.Combine(_templateStruktur.TemplateStruktur.QuellOrdner, ersterQuellOrdner, templateliste.Ordner);
-            var ziel = Path.Combine(_templateStruktur.TemplateStruktur.TemplateOrdner, templateliste.Ordner);
+            var quelle = Path.Combine(templateStruktur.TemplateStruktur.QuellOrdner, ersterQuellOrdner, templateliste.Ordner);
+            var ziel = Path.Combine(templateStruktur.TemplateStruktur.TemplateOrdner, templateliste.Ordner);
 
-            if (!Directory.Exists(ziel)) Directory.CreateDirectory(ziel);
+            if (!Directory.Exists(ziel))
+            {
+                Console.WriteLine($"Template Zielordner erzeugen: {ziel}");
+                _ = Directory.CreateDirectory(ziel);
+            }
 
             foreach (var datei in templateliste.Dateien)
             {
-                if (File.Exists(Path.Combine(quelle, datei)))
+                if (!File.Exists(Path.Combine(quelle, datei)))
                 {
-                    File.Copy(Path.Combine(quelle, datei), Path.Combine(ziel, datei), true);
+                    continue;
                 }
 
+                if (!File.Exists(Path.Combine(ziel, datei)))
+                {
+                    Console.WriteLine($"Template kopieren: {Path.Combine(quelle, datei}");
+                    File.Copy(Path.Combine(quelle, datei), Path.Combine(ziel, datei), true);
+                }
             }
         }
     }
     public static void CopyAll(string quelle, string ziel, bool anzeigen)
     {
-        if (Directory.Exists(ziel)) Directory.Delete(ziel, true);
+        if (Directory.Exists(ziel))
+        {
+            Console.WriteLine("Zielordner löschen " + ziel);
+            Directory.Delete(ziel, true);
+        }
 
-        if (quelle == null) return;
-        if (ziel == null) return;
+        if (quelle == null)
+        {
+            return;
+        }
 
-        if (anzeigen) Console.WriteLine("  " + quelle);
+        if (ziel == null)
+        {
+            return;
+        }
+
+        if (anzeigen)
+        {
+            Console.WriteLine("  " + quelle);
+        }
 
         var source = new DirectoryInfo(quelle);
         var target = new DirectoryInfo(ziel);
 
+        Console.WriteLine("Zielordner erstellen " + target.FullName);
         Directory.CreateDirectory(target.FullName);
 
         foreach (var fi in source.GetFiles())
         {
-            fi.CopyTo(Path.Combine(target.FullName, fi.Name), true);
+            _ = fi.CopyTo(Path.Combine(target.FullName, fi.Name), true);
         }
 
         foreach (var diSourceSubDir in source.GetDirectories())

@@ -1,7 +1,7 @@
 ﻿{
-    "QuellOrdner": "d:\\git\\PlcDigitalTwinAutoTest\\PlcDigitalTwinAutoTest\\___DigitalTwin",
-    "ZielOrdner": "d:\\git\\PlcDigitalTwinAutoTest\\PlcDigitalTwinAutoTest\\___DigitalTwinExport",
-    "TemplateOrdner": "d:\\git\\PlcDigitalTwinAutoTest\\PlcDigitalTwinAutoTest\\___DigitalTwinExport\\DtTemplate",
+    "QuellOrdner": "b:\\git\\PlcDigitalTwinAutoTest\\PlcDigitalTwinAutoTest\\___DigitalTwin",
+    "ZielOrdner": "b:\\git\\PlcDigitalTwinAutoTest\\PlcDigitalTwinAutoTest\\___DigitalTwinExport",
+    "TemplateOrdner": "b:\\git\\PlcDigitalTwinAutoTest\\PlcDigitalTwinAutoTest\\___DigitalTwinExport\\DtTemplate",
     "TemplateListe": [
         {
             "Ordner": "",
@@ -11,6 +11,8 @@
                 "CommunityToolkit.Mvvm.dll",
                 "Contracts.dll",
                 "Contracts.pdb",
+                "ContractsMedia.dll",
+                "ContractsMedia.pdb",
                 "IpAdressenBeckhoff.json",
                 "IpAdressenSiemens.json",
                 "LibDatenstruktur.dll",
@@ -56,6 +58,7 @@
                 "Sharp7.dll",
                 "System.ComponentModel.Composition.dll",
                 "System.Reactive.dll",
+                "StaticRoutes.xml",
                 "TwinCAT.Ads.Abstractions.dll",
                 "TwinCAT.Ads.dll",
                 "TwinCAT.Ads.Server.dll",
@@ -64,11 +67,13 @@
                 "LibEncrypt.pdb",
                 "LibRpc.dll",
                 "LibRpc.pdb",
+                "Otp.NET.dll",
                 "MessagePack.Annotations.dll",
                 "MessagePack.dll",
                 "Microsoft.Extensions.Logging.Abstractions.dll",
                 "Microsoft.NET.StringTools.dll",
                 "SharedMemory.dll",
+                "XamlAnimatedGif.dll",
                 "Xceed.Wpf.AvalonDock.NET5.dll",
                 "Xceed.Wpf.AvalonDock.Themes.Aero.NET5.dll",
                 "Xceed.Wpf.AvalonDock.Themes.Metro.NET5.dll",
@@ -79,7 +84,8 @@
         {
             "Ordner": "Videos",
             "Dateien": [
-                "Flammen.mp4"
+                "Flammen.mp4",
+                "KompletteWeiche.mp4"
             ]
         },
         {
@@ -89,8 +95,50 @@
             ]
         },
         {
+            "Ordner": "ConfigDt\\OpennessJson",
+            "Dateien": [
+                "Plc1214.json",
+                "Plc1215.json",
+                "Plc1516.json"
+            ]
+        },
+        {
+            "Ordner": "ConfigDt\\XmlExport\\Source",
+            "Dateien": [
+                "Main.xml",
+                "Main.enc"
+            ]
+        },
+        {
+            "Ordner": "ConfigDt\\XmlExport\\Source\\LbsFeldkirch",
+            "Dateien": [
+                "PcToPlc.enc",
+                "PcToPlc.xml",
+                "PlcToPc.enc",
+                "PlcToPc.xml",
+                "Startup.enc",
+                "Startup.xml"
+            ]
+        },
+        {
             "Ordner": "LibRpcOpenness",
             "Dateien": [
+                "Contracts.dll",
+                "Contracts.pdb",
+                "LibEncrypt.dll",
+                "LibEncrypt.pdb",
+                "LibRpc.dll",
+                "LibRpc.pdb",
+                "MessagePack.dll",
+                "MessagePack.Annotations.dll",
+                "Microsoft.Bcl.AsyncInterfaces.dll",
+                "Microsoft.NET.StringTools.dll",
+                "System.Buffers.dll",
+                "System.Collections.Immutable.dll",
+                "System.Memory.dll",
+                "System.Numerics.Vectors.dll",
+                "System.Runtime.CompilerServices.Unsafe.dll",
+                "System.Threading.Tasks.Extensions.dll",
                 "LibRpcOpenness.exe",
                 "LibRpcOpenness.exe.config",
                 "LibRpcOpenness.pdb",
@@ -99,62 +147,48 @@
                 "Newtonsoft.Json.dll",
                 "SharedMemory.dll",
                 "Siemens.Engineering.dll",
+                "Siemens.Engineering.xml",
                 "Siemens.Engineering.Hmi.dll",
                 "Siemens.Engineering.Hmi.xml"
             ]
         },
         {
-            "Ordner": "fr",
+            "Ordner": "GlobalLibraries\\1214C",
             "Dateien": [
-                "Xceed.Wpf.AvalonDock.NET5.resources.dll"
+                "1214C.al17"
             ]
         },
         {
-            "Ordner": "hu",
+            "Ordner": "GlobalLibraries\\1214C\\System",
             "Dateien": [
-                "Xceed.Wpf.AvalonDock.NET5.resources.dll"
+                "PEData.idx",
+                "PEData.plf"
             ]
         },
         {
-            "Ordner": "it",
+            "Ordner": "GlobalLibraries\\1215C",
             "Dateien": [
-                "Xceed.Wpf.AvalonDock.NET5.resources.dll"
+                "1215C.al17"
             ]
         },
         {
-            "Ordner": "ja-JP",
+            "Ordner": "GlobalLibraries\\1215C\\System",
             "Dateien": [
-                "Xceed.Wpf.AvalonDock.NET5.resources.dll"
+                "PEData.idx",
+                "PEData.plf"
+            ],
+        },
+        {
+            "Ordner": "GlobalLibraries\\1516",
+            "Dateien": [
+                "1516.al17"
             ]
         },
         {
-            "Ordner": "pt-BR",
+            "Ordner": "GlobalLibraries\\1516\\System",
             "Dateien": [
-                "Xceed.Wpf.AvalonDock.NET5.resources.dll"
-            ]
-        },
-        {
-            "Ordner": "ro",
-            "Dateien": [
-                "Xceed.Wpf.AvalonDock.NET5.resources.dll"
-            ]
-        },
-        {
-            "Ordner": "ru",
-            "Dateien": [
-                "Xceed.Wpf.AvalonDock.NET5.resources.dll"
-            ]
-        },
-        {
-            "Ordner": "sv",
-            "Dateien": [
-                "Xceed.Wpf.AvalonDock.NET5.resources.dll"
-            ]
-        },
-        {
-            "Ordner": "zh-Hans",
-            "Dateien": [
-                "Xceed.Wpf.AvalonDock.NET5.resources.dll"
+                "PEData.idx",
+                "PEData.plf"
             ]
         }
     ]
