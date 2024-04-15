@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
 
 namespace PlcTemplateErstellen;
 
@@ -28,6 +28,12 @@ public class TemplateStrukturLesen
     public class Templateliste
     {
         public string Ordner { get; set; }
-        public string[] Dateien { get; set; }
+        public Datei[] Dateien { get; set; }
+    }
+    public class Datei
+    {
+        public string Name { get; set; }
+        public bool TemplateKopiert { get; set; }
+        public int ProjektDateiZaehler { get; set; }
     }
 }

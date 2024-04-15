@@ -1,4 +1,5 @@
-﻿namespace PlcTemplateErstellen;
+
+namespace PlcTemplateErstellen;
 
 internal static class Program
 {
@@ -14,12 +15,18 @@ internal static class Program
         }
         else
         {
-            var templateStruktur = new TemplateStrukturLesen(args[0]);
-            var dateiFunktionen = new DateiFunktionen(templateStruktur);
-            dateiFunktionen.TemplateErstellen();
+            var jsonDateiname = args[0];
+            var templateStruktur = new TemplateStrukturLesen(jsonDateiname);
+
+            var templateErzeugen = new TemplateErzeugen(templateStruktur);
+            templateErzeugen.TemplateOrdnerErzeugen();
+            templateErzeugen.TemplateStrukturErzeugen();
+
         }
 
         Console.WriteLine("Bitte Enter drücken!");
         _ = Console.ReadLine();
     }
+
+
 }

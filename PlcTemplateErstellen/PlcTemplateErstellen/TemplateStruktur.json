@@ -6,189 +6,203 @@
         {
             "Ordner": "",
             "Dateien": [
-                "BasePlcDtAt.dll",
-                "BasePlcDtAt.pdb",
-                "CommunityToolkit.Mvvm.dll",
-                "Contracts.dll",
-                "Contracts.pdb",
-                "ContractsMedia.dll",
-                "ContractsMedia.pdb",
-                "IpAdressenBeckhoff.json",
-                "IpAdressenSiemens.json",
-                "LibDatenstruktur.dll",
-                "LibDatenstruktur.pdb",
-                "LibHighResolutionTimer.dll",
-                "LibHighResolutionTimer.pdb",
-                "LibKommunikation.dll",
-                "LibKommunikation.pdb",
-                "LibPlcTools.dll",
-                "LibPlcTools.pdb",
-                "LibSiebenSegmentAnzeige.dll",
-                "LibSiebenSegmentAnzeige.pdb",
-                "LibUtil.dll",
-                "LibUtil.pdb",
-                "ICSharpCode.AvalonEdit.dll",
-                "json.zip",
-                "LibAlarmverwaltung.dll",
-                "LibAlarmverwaltung.pdb",
-                "LibAutoTest.dll",
-                "LibAutoTest.pdb",
-                "LibAutoTestRunner.dll",
-                "LibAutoTestRunner.pdb",
-                "LibConfigDt.dll",
-                "LibConfigDt.pdb",
-                "LibDisplayInfo.dll",
-                "LibDisplayInfo.pdb",
-                "LibDisplayPlc.dll",
-                "LibDisplayPlc.pdb",
-                "LibGaugeControl.dll",
-                "LibGaugeControl.pdb",
-                "LibLoesungenAnzeigen.dll",
-                "LibLoesungenAnzeigen.pdb",
-                "LibNotMyInterpreter.dll",
-                "LibNotMyInterpreter.pdb",
-                "LibTextbausteine.dll",
-                "LibWpf.dll",
-                "LibWpf.pdb",
-                "log4net.config",
-                "log4net.dll",
-                "Newtonsoft.Json.dll",
-                "ScottPlot.dll",
-                "ScottPlot.WPF.dll",
-                "Sharp7.dll",
-                "System.ComponentModel.Composition.dll",
-                "System.Reactive.dll",
-                "StaticRoutes.xml",
-                "TwinCAT.Ads.Abstractions.dll",
-                "TwinCAT.Ads.dll",
-                "TwinCAT.Ads.Server.dll",
-                "WpfAnimatedGif.dll",
-                "LibEncrypt.dll",
-                "LibEncrypt.pdb",
-                "LibRpc.dll",
-                "LibRpc.pdb",
-                "Otp.NET.dll",
-                "MessagePack.Annotations.dll",
-                "MessagePack.dll",
-                "Microsoft.Extensions.Logging.Abstractions.dll",
-                "Microsoft.NET.StringTools.dll",
-                "SharedMemory.dll",
-                "XamlAnimatedGif.dll",
-                "Xceed.Wpf.AvalonDock.NET5.dll",
-                "Xceed.Wpf.AvalonDock.Themes.Aero.NET5.dll",
-                "Xceed.Wpf.AvalonDock.Themes.Metro.NET5.dll",
-                "Xceed.Wpf.AvalonDock.Themes.VS2010.NET5.dll",
-                "Xceed.Wpf.Toolkit.NET5.dll"
+               {"Name":"iconPlcDt.ico"},
+               {"Name": "BasePlcDtAt.dll"},
+               {"Name": "CommunityToolkit.Mvvm.dll"},
+               {"Name": "Contracts.dll"},
+               {"Name": "ContractsMedia.dll"},
+               {"Name": "IpAdressenBeckhoff.json"},
+               {"Name": "IpAdressenSiemens.json"},
+               {"Name": "LibDatenstruktur.dll"},
+               {"Name": "LibHighResolutionTimer.dll"},
+               {"Name": "LibKommunikation.dll"},
+               {"Name": "LibPlcTools.dll"},
+               {"Name": "LibSiebenSegmentAnzeige.dll"},
+               {"Name": "LibUtil.dll"},
+               {"Name": "ICSharpCode.AvalonEdit.dll"},
+               {"Name": "json.zip"},
+               {"Name": "LibRegler.dll"},
+               {"Name": "Stateless.dll"},
+               {"Name": "LibAlarmverwaltung.dll"},
+               {"Name": "LibAutoTest.dll"},
+               {"Name": "LibAutoTestRunner.dll"},
+               {"Name": "LibConfigDt.dll"},
+               {"Name": "LibDisplayInfo.dll"},
+               {"Name": "LibDisplayPlc.dll"},
+               {"Name": "LibGaugeControl.dll"},
+               {"Name": "LibLoesungenAnzeigen.dll"},
+               {"Name": "LibNotMyInterpreter.dll"},
+               {"Name": "LibTextbausteine.dll"},
+               {"Name": "LibWpf.dll"},
+               {"Name": "log4net.config"},
+               {"Name": "log4net.dll"},
+               {"Name": "Newtonsoft.Json.dll"},
+               {"Name": "ScottPlot.dll"},
+               {"Name": "ScottPlot.WPF.dll"},
+               {"Name": "Sharp7.dll"},
+               {"Name": "System.ComponentModel.Composition.dll"},
+               {"Name": "System.Reactive.dll"},
+               {"Name": "StaticRoutes.xml"},
+               {"Name": "TwinCAT.Ads.Abstractions.dll"},
+               {"Name": "TwinCAT.Ads.dll"},
+               {"Name": "TwinCAT.Ads.Server.dll"},
+               {"Name": "WpfAnimatedGif.dll"},
+               {"Name": "LibEncrypt.dll"},
+               {"Name": "LibRpc.dll"},
+               {"Name": "Otp.NET.dll"},
+               {"Name": "MessagePack.Annotations.dll"},
+               {"Name": "MessagePack.dll"},
+               {"Name": "Microsoft.Extensions.Logging.Abstractions.dll"},
+               {"Name": "Microsoft.Win32.SystemEvents.dll"},
+               {"Name": "Microsoft.NET.StringTools.dll"},
+               {"Name": "NETCore.Encrypt.dll"},
+               {"Name": "SharedMemory.dll"},
+               {"Name": "System.Configuration.ConfigurationManager.dll"},
+               {"Name": "System.Drawing.Common.dll"},
+               {"Name": "System.Security.Cryptography.ProtectedData.dll"},
+               {"Name": "System.Security.Permissions.dll"},
+               {"Name": "System.Windows.Extensions.dll"},
+               {"Name": "XamlAnimatedGif.dll"},
+               {"Name": "Xceed.Wpf.AvalonDock.NET5.dll"},
+               {"Name": "Xceed.Wpf.AvalonDock.Themes.Aero.NET5.dll"},
+               {"Name": "Xceed.Wpf.AvalonDock.Themes.Metro.NET5.dll"},
+               {"Name": "Xceed.Wpf.AvalonDock.Themes.VS2010.NET5.dll"},
+               {"Name": "Xceed.Wpf.Toolkit.NET5.dll"},
+               {"Name": "GLWpfControl.dll"},
+               {"Name": "OpenTK.Compute.dll"},
+               {"Name": "OpenTK.Core.dll"},
+               {"Name": "OpenTK.Graphics.dll"},
+               {"Name": "OpenTK.Input.dll"},
+               {"Name": "OpenTK.Mathematics.dll"},
+               {"Name": "OpenTK.OpenAL.dll"},
+               {"Name": "OpenTK.Windowing.Common.dll"},
+               {"Name": "OpenTK.Windowing.Desktop.dll"},
+               {"Name": "OpenTK.Windowing.GraphicsLibraryFramework.dll"},
+               {"Name": "SkiaSharp.dll"},
+               {"Name": "SkiaSharp.Views.Desktop.Common.dll"},
+               {"Name": "SkiaSharp.Views.WPF.dll"}
             ]
         },
         {
             "Ordner": "Videos",
             "Dateien": [
-                "Flammen.mp4",
-                "KompletteWeiche.mp4"
+                {"Name": "Flammen.mp4"},
+                {"Name": "KompletteWeiche.mp4"}
             ]
         },
         {
             "Ordner": "de",
             "Dateien": [
-                "Xceed.Wpf.AvalonDock.NET5.resources.dll"
+                {"Name": "Xceed.Wpf.AvalonDock.NET5.resources.dll"}
             ]
         },
         {
             "Ordner": "ConfigDt\\OpennessJson",
             "Dateien": [
-                "Plc1214.json",
-                "Plc1215.json",
-                "Plc1516.json"
+                {"Name": "Plc1214.json"},
+                {"Name": "Plc1215.json"},
+                {"Name":"Plc1516.json"}
             ]
         },
         {
             "Ordner": "ConfigDt\\XmlExport\\Source",
             "Dateien": [
-                "Main.xml",
-                "Main.enc"
+                {"Name": "Main.xml"},
+                {"Name":"Main.enc"}
             ]
         },
         {
             "Ordner": "ConfigDt\\XmlExport\\Source\\LbsFeldkirch",
             "Dateien": [
-                "PcToPlc.enc",
-                "PcToPlc.xml",
-                "PlcToPc.enc",
-                "PlcToPc.xml",
-                "Startup.enc",
-                "Startup.xml"
+                {"Name":"PcToPlc.enc"},
+                {"Name": "PcToPlc.xml"},
+                {"Name": "PlcToPc.enc"},
+                {"Name": "PlcToPc.xml"},
+                {"Name": "Startup.enc"},
+                {"Name": "Startup.xml"}
             ]
         },
         {
             "Ordner": "LibRpcOpenness",
             "Dateien": [
-                "Contracts.dll",
-                "Contracts.pdb",
-                "LibEncrypt.dll",
-                "LibEncrypt.pdb",
-                "LibRpc.dll",
-                "LibRpc.pdb",
-                "MessagePack.dll",
-                "MessagePack.Annotations.dll",
-                "Microsoft.Bcl.AsyncInterfaces.dll",
-                "Microsoft.NET.StringTools.dll",
-                "System.Buffers.dll",
-                "System.Collections.Immutable.dll",
-                "System.Memory.dll",
-                "System.Numerics.Vectors.dll",
-                "System.Runtime.CompilerServices.Unsafe.dll",
-                "System.Threading.Tasks.Extensions.dll",
-                "LibRpcOpenness.exe",
-                "LibRpcOpenness.exe.config",
-                "LibRpcOpenness.pdb",
-                "log4net.config",
-                "log4net.dll",
-                "Newtonsoft.Json.dll",
-                "SharedMemory.dll",
-                "Siemens.Engineering.dll",
-                "Siemens.Engineering.xml",
-                "Siemens.Engineering.Hmi.dll",
-                "Siemens.Engineering.Hmi.xml"
+               {"Name": "Contracts.dll"},
+               {"Name": "LibEncrypt.dll"},
+               {"Name": "LibRpc.dll"},
+               {"Name": "MessagePack.dll"},
+               {"Name": "MessagePack.Annotations.dll"},
+               {"Name": "Microsoft.Bcl.AsyncInterfaces.dll"},
+               {"Name": "Microsoft.NET.StringTools.dll"},
+               {"Name": "System.Buffers.dll"},
+               {"Name": "System.Collections.Immutable.dll"},
+               {"Name": "System.Memory.dll"},
+               {"Name": "System.Numerics.Vectors.dll"},
+               {"Name": "System.Runtime.CompilerServices.Unsafe.dll"},
+               {"Name": "System.Threading.Tasks.Extensions.dll"},
+               {"Name": "LibRpcOpenness.exe"},
+               {"Name": "LibRpcOpenness.exe.config"},
+               {"Name": "log4net.config"},
+               {"Name": "log4net.dll"},
+               {"Name": "Newtonsoft.Json.dll"},
+               {"Name": "SharedMemory.dll"},
+               {"Name": "Siemens.Engineering.dll"},
+               {"Name": "Siemens.Engineering.xml"},
+               {"Name": "Siemens.Engineering.Hmi.dll"},
+               {"Name": "Siemens.Engineering.Hmi.xml"}
             ]
         },
         {
             "Ordner": "GlobalLibraries\\1214C",
             "Dateien": [
-                "1214C.al17"
+                {"Name":"1214C.al17"}
             ]
         },
         {
             "Ordner": "GlobalLibraries\\1214C\\System",
             "Dateien": [
-                "PEData.idx",
-                "PEData.plf"
+                {"Name":  "PEData.idx"},
+                {"Name":  "PEData.plf"}
             ]
         },
         {
             "Ordner": "GlobalLibraries\\1215C",
             "Dateien": [
-                "1215C.al17"
+                {"Name": "1215C.al17"}
             ]
         },
         {
             "Ordner": "GlobalLibraries\\1215C\\System",
             "Dateien": [
-                "PEData.idx",
-                "PEData.plf"
+                {"Name": "PEData.idx"},
+                {"Name":"PEData.plf"}
             ],
         },
         {
             "Ordner": "GlobalLibraries\\1516",
             "Dateien": [
-                "1516.al17"
+                {"Name": "1516.al17"}
             ]
         },
         {
             "Ordner": "GlobalLibraries\\1516\\System",
             "Dateien": [
-                "PEData.idx",
-                "PEData.plf"
+                {"Name":  "PEData.idx"},
+                {"Name":  "PEData.plf"}
+            ]
+        },
+        {
+            "Ordner": "runtimes\\win\\lib\\net6.0",
+            "Dateien": [
+                {"Name": "Microsoft.Win32.SystemEvents.dll"},
+                {"Name": "System.Drawing.Common.dll"},
+                {"Name":"System.Security.Cryptography.ProtectedData.dll"},
+                {"Name": "System.Windows.Extensions.dll"}
+            ]
+        },
+        {
+            "Ordner": "runtimes\\win-x64\\native",
+            "Dateien": [
+                {"Name": "libSkiaSharp.dll"},
+                {"Name": "glfw3.dll"}
             ]
         }
     ]
