@@ -16,9 +16,13 @@ internal static class Program
         else
         {
             var jsonDateiname = args[0];
-            var templateStruktur = new TemplateStrukturLesen(jsonDateiname);
 
-            var templateErzeugen = new TemplateErzeugen(templateStruktur);
+            var jsonDaten = new TemplateStrukturErzeugen(jsonDateiname);
+            var templateStruktur = jsonDaten.GetStruktur();
+            var templateFileVorhanden = jsonDaten.GetDictionaryVorhanden();
+            var templateFileZaehler = jsonDaten.GetDictionaryZaehler();
+
+            var templateErzeugen = new DateiFunktionen(templateStruktur, templateFileVorhanden, templateFileZaehler);
             templateErzeugen.TemplateOrdnerErzeugen();
             templateErzeugen.TemplateStrukturErzeugen();
 
