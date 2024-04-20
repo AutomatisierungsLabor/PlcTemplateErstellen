@@ -14,8 +14,6 @@ internal class DateiFunktionen
         _templateFileVorhanden = templateFileVorhanden;
         _templateFileZaehler = templateFileZaehler;
     }
-
-
     public void TemplateOrdnerErzeugen()
     {
         try
@@ -37,7 +35,6 @@ internal class DateiFunktionen
             Environment.Exit(-1);
         }
     }
-
     public void TemplateStrukturErzeugen()
     {
         var alleProjektOrdner = Directory.EnumerateDirectories(_templateStruktur.QuellOrdner);
@@ -52,7 +49,6 @@ internal class DateiFunktionen
             }
         }
     }
-
     private void TemplateDateiKopieren(string projektOrdner, string sourceDatei)
     {
         var dateiname = sourceDatei[(_templateStruktur.QuellOrdner.Length + projektOrdner.Length + 2)..];
@@ -64,7 +60,7 @@ internal class DateiFunktionen
                 if (File.Exists(sourceDatei))
                 {
                     _templateFileVorhanden[dateiname] = true;
-                    var ziel = Path.Combine(_templateStruktur.TemplateOrdner, projektOrdner, dateiname);
+                    var ziel = Path.Combine(_templateStruktur.TemplateOrdner, dateiname);
 
                     var a = Path.GetDirectoryName(ziel);
                     if (!string.IsNullOrEmpty(a))
@@ -97,6 +93,7 @@ internal class DateiFunktionen
             }
 
             File.Copy(sourceDatei, ziel);
+
         }
     }
 }

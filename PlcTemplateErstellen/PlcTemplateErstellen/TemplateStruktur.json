@@ -53,15 +53,9 @@
                 "MessagePack.Annotations.dll",
                 "MessagePack.dll",
                 "Microsoft.Extensions.Logging.Abstractions.dll",
-                "Microsoft.Win32.SystemEvents.dll",
                 "Microsoft.NET.StringTools.dll",
                 "NETCore.Encrypt.dll",
                 "SharedMemory.dll",
-                "System.Configuration.ConfigurationManager.dll",
-                "System.Drawing.Common.dll",
-                "System.Security.Cryptography.ProtectedData.dll",
-                "System.Security.Permissions.dll",
-                "System.Windows.Extensions.dll",
                 "XamlAnimatedGif.dll",
                 "Xceed.Wpf.AvalonDock.NET5.dll",
                 "Xceed.Wpf.AvalonDock.Themes.Aero.NET5.dll",
@@ -140,8 +134,6 @@
                 "System.Threading.Tasks.Extensions.dll",
                 "LibRpcOpenness.exe",
                 "LibRpcOpenness.exe.config",
-                "log4net.config",
-                "log4net.dll",
                 "Newtonsoft.Json.dll",
                 "SharedMemory.dll",
                 "Siemens.Engineering.dll",
@@ -187,15 +179,6 @@
             "Dateien": [
                 "PEData.idx",
                 "PEData.plf"
-            ]
-        },
-        {
-            "Ordner": "runtimes\\win\\lib\\net6.0",
-            "Dateien": [
-                "Microsoft.Win32.SystemEvents.dll",
-                "System.Drawing.Common.dll",
-                "System.Security.Cryptography.ProtectedData.dll",
-                "System.Windows.Extensions.dll"
             ]
         },
         {

@@ -1,4 +1,5 @@
 
+
 namespace PlcTemplateErstellen;
 
 internal static class Program
@@ -26,11 +27,12 @@ internal static class Program
             templateErzeugen.TemplateOrdnerErzeugen();
             templateErzeugen.TemplateStrukturErzeugen();
 
+           Auswertungen.AuswertungAnzeigen(templateFileVorhanden, templateFileZaehler);
         }
 
         Console.WriteLine("Bitte Enter drücken!");
         _ = Console.ReadLine();
     }
 
-
+  
 }
